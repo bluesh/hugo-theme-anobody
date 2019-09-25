@@ -1,0 +1,90 @@
+/* Put your custom styles here and run `npm start` from the "src" directory on */
+body {
+    font: 300 16px Merriweather, proxima-nova, 'Myriad Pro',serif;
+    background: #F8F7F6;
+    color: #3D3634;
+}
+img {
+    max-width: 100%;
+}
+a {
+    color: #dc9810;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #112c22;
+}
+audio {
+    width: 100%;
+}
+.anobody-header,
+.anobody-footer {
+    text-align: center;
+    font-family: proxima-nova;
+    margin: 12px 66px;
+    text-transform: uppercase;
+} 
+.anobody-footer a {
+    color: #3D3634;
+}
+.anobody-header .header-logo {
+    margin-top: 22px;
+    width: 66px;
+    display: inline-block;
+}
+.subscribe-group {
+    text-align: center;
+    margin-bottom: 28px;
+}
+.subscribe-group .btn {
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 6px;
+    color: #3D3634;
+    border: 1px solid #3D3634;
+    padding: 4px 8px;
+}
+
+.homepage-content {
+    max-width: 980px;
+    margin: 0 auto;
+}
+.list-item {
+    background: #fff;
+    padding: 5px 20px 20px 20px;
+    margin-bottom: 20px;
+}
+.podcast-header {
+    display: flex;
+    justify-content: space-around;
+}
+.podcast-header-left {
+    width: 25%;
+    display: flexbox;
+}
+.podcast-header-right {
+    width: 65%;
+    display: flexbox;
+}
+.podcast-audio {
+    margin: 12px 0;
+}
+
+.page-item {
+    margin: 12px;
+    text-align: right
+}
+
+@media only screen and (max-device-width :640px){
+    .podcast-header {
+        display: block;
+        text-align: center;
+    }
+    .podcast-header-left,
+    .podcast-header-right {
+        width: 100%;
+    }
+    .podcast-header-des {
+        text-align: left;
+    }
+}

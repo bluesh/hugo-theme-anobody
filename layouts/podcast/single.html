@@ -1,0 +1,57 @@
+{{ define "main" }}
+
+{{- partial "subscribe.html" . }}
+<div class="homepage-content">
+  <article class="list-item">
+      <h2>#{{ .Params.episode }} {{ title .Title }}</h2>
+      <div class="podcast-header">
+        <div class="podcast-header-left">
+          <img src="{{ .Params.episode_image | absURL }}" class="img-fluid episode_image"/>
+        </div>
+        <div class="podcast-header-right">
+          <p>{{ dateFormat "Jan 2, 2006" .Date }} | {{ .Params.podcast_duration }} </p>
+          <audio class="podcast-audio" src="{{ . | absURL }}" controls preload></audio>
+          <p class="podcast-header-des">{{ .Description | markdownify }}</p>
+        </div>
+      </div>
+
+      <div class="podcast-content">
+          {{ .Content }}
+      </div>
+
+      <div class="podcast-footer">
+          {{ with .Site.Params.disqusShortname }}
+          <!-- disqus begins -->
+          <div class="disqus-plugin">
+              {{ partial "disqus.html" }}
+          </div>
+          <!-- disqus ends -->
+          {{ end }}
+
+           <!-- pager begin -->
+          <nav class="pager-plugin">
+            <div class="pagination">
+              {{ if .PrevInSection }}
+                <div class="page-item">
+                  <a href="{{.PrevInSection.Permalink}}" class="page-link">
+                    <span aria-hidden="true">&larr;</span> 上一期：
+                    #{{ .PrevInSection.Params.episode }} {{ title .PrevInSection.Title }}</a>
+                  </div>
+              {{ end }}
+              {{ if .NextInSection }}
+                <div class="page-item">
+                  <a href="{{.NextInSection.Permalink}}" class="page-link">
+                    <span aria-hidden="true">&rarr;</span> 下一期：
+                    #{{ .NextInSection.Params.episode }} {{ title .NextInSection.Title }}
+                  </a>
+                </div>
+              {{ end }}
+            </div>
+          </nav>
+          <!-- pager end -->
+      </div>
+       
+</article>
+</div>
+
+    {{ end }}

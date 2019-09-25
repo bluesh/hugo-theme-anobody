@@ -1,0 +1,36 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{ if .Description}}
+  <meta name="description" content="{{ .Description }}">
+{{ else }}
+  {{ if .Site.Params.Description }}<meta name="description" content="{{ .Site.Params.Description }}">
+  {{ end }}
+{{ end }}
+{{ hugo.Generator }}
+
+{{ partial "head/seo.html" . }}
+
+<title>
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+{{ if eq $url "/" }}
+    {{ .Site.Title }}
+{{ else }}
+    {{ if .Params.Heading }} {{ .Params.Heading }} {{ else }} {{ .Title }} {{ end }}
+{{ end }}
+</title>
+<link rel="canonical" href="{{ .Permalink }}">
+{{ if isset $.Site.Params "favicon"}}
+<link rel="icon" href="{{ $.Site.Params.favicon | absURL }}">
+{{ else }}
+<link rel="icon" href="icons/favicon.ico">
+{{ end }}
+<script src="//use.fontawesome.com/cab938f3c2.js"></script>
+<script src="//api.html5media.info/1.2.2/html5media.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link href="//fonts.googleapis.com/css?family=Merriweather:300,400&display=swap" rel="stylesheet">
+<!-- Custom CSS -->
+<link rel="stylesheet" href={{"css/main.css" | absURL }}>
+

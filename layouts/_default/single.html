@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{- partial "subscribe.html" . }}
+<div class="homepage-content">
+    <article class="list-item">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </article>
+</div>
+{{ end }}

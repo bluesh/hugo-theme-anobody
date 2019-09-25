@@ -1,0 +1,16 @@
+
+{{ define "main" }}
+{{- partial "subscribe.html" . }}
+<div class="homepage-content">
+    <article>
+  <!-- this <div> includes the title summary -->
+    {{ range first 10 .Pages }}
+    <div class="list-item">
+      <h2><a href="{{ .RelPermalink }}">#{{ .Params.episode }} {{ .Title }}</a></h2>
+      <p>{{ dateFormat "Jan 2, 2006" .Date }} | {{ .Params.podcast_duration }} </p>
+      {{ .Description }}
+    </div>
+    {{ end }}
+</article>
+</div>
+{{ end }}
