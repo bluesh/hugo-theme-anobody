@@ -11,7 +11,7 @@
             {{ range .Pages }}
             <div class="list-item">
               <h2><a href="{{ .RelPermalink }}">#{{ .Params.episode }} {{ .Title }}</a></h2>
-              <p>{{ dateFormat "Jan 2, 2006" .Date }} | {{ .Params.podcast_duration }} </p>
+              <p><i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} | <i class="fa fa-hourglass-half"></i>{{ .Params.podcast_duration }} </p>
               {{ .Description }}
             </div>
             {{ end }}

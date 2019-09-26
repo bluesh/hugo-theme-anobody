@@ -11,6 +11,7 @@ a {
     color: #dc9810;
     text-decoration: none;
 }
+i.fa { margin-right: 2px }
 h1, h2, h3, h4, h5, h6 {
     color: #112c22;
 }

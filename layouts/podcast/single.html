@@ -9,7 +9,7 @@
           <img src="{{ .Params.episode_image | absURL }}" class="img-fluid episode_image"/>
         </div>
         <div class="podcast-header-right">
-          <p>{{ dateFormat "Jan 2, 2006" .Date }} | {{ .Params.podcast_duration }} </p>
+          <p><i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} | <i class="fa fa-hourglass-half"></i>{{ .Params.podcast_duration }} </p>
           <audio class="podcast-audio" src="{{ . | absURL }}" controls preload></audio>
           <p class="podcast-header-des">{{ .Description | markdownify }}</p>
         </div>
