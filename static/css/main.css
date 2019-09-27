@@ -12,6 +12,7 @@ a {
     text-decoration: none;
 }
 i.fa { margin-right: 2px }
+p { word-break: break-all; }
 h1, h2, h3, h4, h5, h6 {
     color: #112c22;
 }
@@ -61,11 +62,9 @@ audio {
 }
 .podcast-header-left {
     width: 25%;
-    display: flexbox;
 }
 .podcast-header-right {
     width: 65%;
-    display: flexbox;
 }
 .podcast-audio {
     margin: 12px 0;
@@ -76,7 +75,15 @@ audio {
     text-align: right
 }
 
-@media only screen and (max-device-width :640px){
+.coffee-img {
+    display: flex;
+    justify-content: space-around;
+}
+.coffee-img .img-fluid {
+    width: 48%;
+}
+
+@media only screen and (max-width :640px){
     .podcast-header {
         display: block;
         text-align: center;
