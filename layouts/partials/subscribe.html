@@ -10,7 +10,7 @@
             <a class="btn btn-default subscribe_buttons" href="{{ .Site.Params.android_subscribe }}"><i class="fa fa-android"></i>&nbsp;Android</a>
         {{ end }}
         {{ if (isset .Site.Params "google_play_subscribe") }}
-            <a class="btn btn-default" target="_blank" href="{{ .Site.Params.google_play_subscribe }}"><i class="fa fa-google"></i>&nbsp;Google Play Music</a>
+            <a class="btn btn-default" target="_blank" href="{{ .Site.Params.google_play_subscribe }}"><i class="fa fa-google"></i>&nbsp;Google Podcast</a>
         {{ end }}
         {{ with .Site.Params.stitcher_subscribe }}
             <a class="btn btn-default" target="_blank" href="{{ . }}"><i class="fa fa-podcast"></i>&nbsp;Stitcher</a>

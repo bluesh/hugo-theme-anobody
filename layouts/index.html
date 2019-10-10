@@ -1,7 +1,7 @@
 {{ define "main" }}
     {{- partial "subscribe.html" . }}
-    <main aria-role="main">
-      <div class="homepage-content">
+    <main aria-role="main" class="container">
+      <div class="main-area">
         <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
         {{ .Content }}
         <!-- Note that .Pages is the same as .Site.RegularPages on the homepage template. -->
@@ -18,5 +18,7 @@
           </article>
         {{ end }}
       </div>
-    </main>
+
+      {{- partial "sidebar.html" . }}
+  </main>
 {{ end }}
