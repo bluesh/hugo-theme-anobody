@@ -1,0 +1,19 @@
+
+{{ define "main" }}
+{{- partial "subscribe.html" . }}
+<div class="container">
+    <article class="main-area">
+    {{- partial "breadcrumbs.html" . }}
+    <!-- this <div> includes the title summary -->
+    {{ range first 10 .Pages }}
+    <div class="list-item">
+        <h2><a href="{{ .RelPermalink }}">#{{ .Params.episode }} {{ .Title }}</a></h2>
+        <p>{{ dateFormat "Jan 2, 2006" .Date }} | {{ .Params.podcast_duration }} </p>
+        {{ .Description }}
+    </div>
+    {{ end }}
+    
+</article>
+{{- partial "sidebar.html" . }}
+</div>
+{{ end }}

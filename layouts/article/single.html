@@ -1,0 +1,59 @@
+{{ define "main" }}
+
+{{- partial "subscribe.html" . }}
+<div class="container">
+  <div class="main-area">
+      {{- partial "breadcrumbs.html" . }}
+      <article class="article">
+          <h2>{{ title .Title }}</h2>
+          <p>
+            <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} | 
+            <i class="fa fa-tags"></i>
+            {{ range .Params.tags }}
+                <a href="/tags/{{ . }}">{{ . }}</a>
+            {{ end }}
+          </p>
+    
+          <div class="podcast-content">
+              {{ .Content }}
+          </div>
+    
+          <div class="podcast-footer">
+              {{ with .Site.Params.disqusShortname }}
+              <!-- disqus begins -->
+              <div class="disqus-plugin">
+                  {{ partial "disqus.html" }}
+              </div>
+              <!-- disqus ends -->
+              {{ end }}
+    
+               <!-- pager begin -->
+              <nav class="pager-plugin">
+                <div class="pagination">
+                  {{ if .PrevInSection }}
+                    <div class="page-item">
+                      <a href="{{.PrevInSection.Permalink}}" class="page-link">
+                        <span aria-hidden="true">&larr;</span> 上一篇：
+                        {{ title .PrevInSection.Title }}</a>
+                      </div>
+                  {{ end }}
+                  {{ if .NextInSection }}
+                    <div class="page-item">
+                      <a href="{{.NextInSection.Permalink}}" class="page-link">
+                        <span aria-hidden="true">&rarr;</span> 下一篇：
+                        {{ title .NextInSection.Title }}
+                      </a>
+                    </div>
+                  {{ end }}
+                </div>
+              </nav>
+              <!-- pager end -->
+          </div>
+           
+      </article>
+  </div>
+  
+  {{- partial "sidebar.html" . }}
+</div>
+
+{{ end }}

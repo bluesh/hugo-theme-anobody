@@ -19,6 +19,11 @@ h1, h2, h3, h4, h5, h6 {
 audio {
     width: 100%;
 }
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid color-border;
+}
 .anobody-header,
 .anobody-footer {
     text-align: center;
@@ -96,7 +101,6 @@ audio {
     width: 48%;
 }
 .navgation ul {
-    margin: 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -107,14 +111,45 @@ audio {
     display: inline-block;
     margin: 0 8px;
 }
-.sidebar ul {
-    margin: 0;
-    padding: 0;
-}
 .sidebar li {
     list-style: none;
     margin: 0 0 10px 0;
+    color: #db4d52;
 }
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+li {
+    margin: 0 0 10px 0;
+    list-style-position: inside;
+}
+li p {
+    display: inline;
+}
+.article {
+    background: #fff;
+    padding: 5px 20px 20px 20px;
+    margin-bottom: 20px;
+    font-family: -apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,Microsoft YaHei,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,Arial,sans-serif;
+    font-size: 14px;
+}
+.article a:before,
+.article a:after {
+    content: '[';
+    margin: 0 2px;
+    color: #a0a0a0;
+}
+.article a:after {
+    content: ']';
+}
+blockquote {
+    margin: 2em 0;
+    padding-left: 20px;
+    border-left: 4px solid #42b983;
+    color: gray;
+    text-align: left;
+}    
 @media only screen and (max-width :640px){
     .podcast-header {
         display: block;
