@@ -1,6 +1,6 @@
 /* Put your custom styles here and run `npm start` from the "src" directory on */
 body {
-    font: 300 16px Merriweather, proxima-nova, 'Myriad Pro',serif;
+    font: 300 16px/1.8 Merriweather, proxima-nova, 'Myriad Pro',serif;
     background: #F8F7F6;
     color: #3D3634;
 }
