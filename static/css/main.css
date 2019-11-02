@@ -99,6 +99,7 @@ hr {
 }
 .coffee-img .img-fluid {
     width: 48%;
+    height: auto;
 }
 .navgation ul {
     position: absolute;
