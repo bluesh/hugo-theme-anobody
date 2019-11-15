@@ -6,7 +6,7 @@
     {{- partial "breadcrumbs.html" . }}
     <!-- this <div> includes the title summary -->
     {{ range first 10 .Pages }}
-    <div class="article">
+    <div class="list-item">
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       <p>
           <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} | 

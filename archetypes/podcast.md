@@ -1,11 +1,11 @@
 ---
 title: ""
-date: 2019-10-07T03:15:04+02:00
-publish_date: 2019-10-07T03:15:30+02:00
+date: 2019-10-07T00:15:04+02:00
+publish_date: 2019-10-07T00:15:30+02:00
 episode: 0
-podcast_file: "volN.mp3"
-podcast_duration: ""
-podcast_bytes: ""
+podcast_file: "vol0.mp3"
+podcast_duration: "00:00"
+podcast_bytes: "0000"
 episode_image: "https://static.anobody.im/images/banner.png"
 media_prefix: "https://static.anobody.im/audios/"
 description: ""
