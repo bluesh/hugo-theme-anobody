@@ -30,6 +30,12 @@
         {{ if (isset .Site.Params "twitter_subscribe") }}
             <a class="btn btn-default" target="_blank" href="{{ .Site.Params.twitter_subscribe }}"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>
         {{ end }}
+        {{ if (isset .Site.Params "moon_fm_subscribe") }}
+            <a class="btn btn-default" target="_blank" href="{{ .Site.Params.moon_fm_subscribe }}"><i class="fa fa-podcast"></i>&nbsp;Moon.FM</a>
+        {{ end }}
+        {{ if (isset .Site.Params "player_fm_subscribe") }}
+            <a class="btn btn-default" target="_blank" href="{{ .Site.Params.player_fm_subscribe }}"><i class="fa fa-podcast"></i>&nbsp;Player.FM</a>
+        {{ end }}
         {{ if (isset .Site.Params "rss_subscribe" )}}
             <a class="btn btn-default" target="_blank" href="{{ .Site.Params.rss_subscribe }}"><i class="fa fa-rss"></i>&nbsp;RSS</a>
         {{ else }}
