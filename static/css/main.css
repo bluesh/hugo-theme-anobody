@@ -1,6 +1,6 @@
 /* Put your custom styles here and run `npm start` from the "src" directory on */
 body {
-    font: 300 16px/1.8 Merriweather, proxima-nova, 'Myriad Pro',serif;
+    font: 300 14px/1.8 Merriweather, proxima-nova, 'Myriad Pro',serif;
     background: #F8F7F6;
     color: #3D3634;
 }
@@ -25,7 +25,7 @@ hr {
     border-top: 1px solid color-border;
 }
 h1,h2,h3 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-top: 0;
 }
 h4,h5,h6 {

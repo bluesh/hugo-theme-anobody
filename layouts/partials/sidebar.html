@@ -1,6 +1,6 @@
 <!-- sidebar start -->
 <aside class="sidebar">
-    <h3>Contact</h3>
+    <h4>Contact</h4>
     <p>网站内容都是免费的，但运营、存储每月都需要支出时间和money。分享、转发、订阅是对我们最大的肯定和支持。</p>
     <p>太喜欢了想<a href="/about#请阿乐喝咖啡">请阿乐喝咖啡☕️</a></p>
     <ul>
@@ -18,19 +18,16 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    <h3>Top Article</h3>
+    <h4>Top Article</h4>
     <ul>
-        <li><a href="/article//bullet-points/" title="《子弹笔记术》——万物皆可「子弹笔记」">《子弹笔记术》——万物皆可「子弹笔记」</a></li>
-        <li><a href="/article/yizhili/" title="意志力：关于自控、专注和效率的心理学">意志力：关于自控、专注和效率的心理学</a></li>
-        <li><a href="/article/outliers-the-story-of-success/" title="《异类：不一样的成功启示录》">《异类：不一样的成功启示录》</a></li>
-        <li><a href="/article/startup/" title="如何开始制作一档独立中文播客">如何开始制作一档独立中文播客</a></li>
+        {{ range $elem_key, $elem_val := $.Site.Params.top_articles }}
+        <li><a href="{{ $elem_key }}" title="{{ $elem_val }}">{{ $elem_val }}</a></li>
+        {{ end }}
     </ul>
-    <h3>Top Podcast</h3>
+    <h4>Top Podcast</h4>
     <ul>
-        <li><a href="/podcast/vol8/" title="非典型淘宝店主小柯的香港游记">#8 非典型淘宝店主小柯的香港游记</a></li>
-        <li><a href="/podcast/vol1/" title="软件工程师小刘的海外求职经验">#1 软件工程师小刘的海外求职经验</a></li>
-        <li><a href="/podcast/vol7/" title="自由职业者丁一的荷兰致幻旅行">#7 自由职业者丁一的荷兰致幻旅行</a></li>
-        <li><a href="/podcast/vol10/" title="瑜伽老师小潘和前天猫设计师小丁特别的蜜月旅行：美洲流浪记">#10 瑜伽老师小潘和前天猫设计师小丁特别的蜜月旅行：美洲流浪记</a></li>
-        <li><a href="/podcast/vol9/" title="研究向艺术家 Rose 的万物有灵论">#9 研究向艺术家 Rose 的万物有灵论</a></li>
+        {{ range $elem_key, $elem_val := $.Site.Params.top_podcasts }}
+        <li><a href="{{ $elem_key }}" title="{{ $elem_val }}">{{ $elem_val }}</a></li>
+        {{ end }}
     </ul>
 </aside>

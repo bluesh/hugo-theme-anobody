@@ -5,7 +5,7 @@
     <article class="main-area">
     {{- partial "breadcrumbs.html" . }}
     <!-- this <div> includes the title summary -->
-    {{ range first 10 .Pages }}
+    {{ range .Pages }}
     <div class="list-item">
         <h2><a href="{{ .RelPermalink }}">#{{ .Params.episode }} {{ .Title }}</a></h2>
         <p>{{ dateFormat "Jan 2, 2006" .Date }} | {{ .Params.podcast_duration }} </p>
