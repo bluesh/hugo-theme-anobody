@@ -4,7 +4,11 @@
   <div class="border-content">
     <div class="main-area">
         <article class="list-item">
-            <p class="list-tag"><i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }}   |   <i class="fa fa-hourglass-half"></i>{{ .Params.podcast_duration }} </p>
+            <p class="list-tag">
+              <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} <em>|</em>
+              <i class="fa fa-hourglass-half"></i>{{ .Params.podcast_duration }} <em>|</em>
+              <i class="fa fa-book"></i><i class="leancloud_visitors" id={{ .URL }} data-title={{ .Title }}></i>
+            </p>
             <h2>#{{ .Params.episode }} {{ title .Title }}</h2>
             <div class="podcast-header">
                 <audio class="podcast-audio" src="{{ .Params.media_prefix }}{{ .Params.podcast_file }}" controls preload></audio>

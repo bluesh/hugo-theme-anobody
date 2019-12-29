@@ -6,11 +6,12 @@
         {{ range .Pages }}
         <div class="list-item">
           <p class="list-tag">
-            <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} | 
+            <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} <em>|</em>
             <i class="fa fa-tags"></i>
             {{ range .Params.tags }}
                 <a href="/tags/{{ . }}">{{ . }}</a>
-            {{ end }}
+            {{ end }} <em>|</em>
+            <i class="fa fa-book"></i><i class="leancloud_visitors" id={{ .URL }} data-title={{ .Title }}></i>
           </p>
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         </div>

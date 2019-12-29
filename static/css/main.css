@@ -123,6 +123,9 @@ h4 {
     font-size: 0.85em;
     opacity: 0.7;
 }
+.list-item .list-tag em {
+    margin: 0 18px;
+}
 .list-item .icon-play {
     float: right;
     font-size: 32px;

@@ -7,7 +7,11 @@
             <div class="list-item">
                 <a href="{{ .RelPermalink }}">
                     <i class="fa fa-play-circle icon-play"></i>
-                    <p class="list-tag"><i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }}   |   <i class="fa fa-hourglass-half"></i>{{ .Params.podcast_duration }} </p>
+                    <p class="list-tag">
+                        <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} <em>|</em>
+                        <i class="fa fa-hourglass-half"></i>{{ .Params.podcast_duration }} <em>|</em>
+                        <i class="fa fa-book"></i><i class="leancloud_visitors" id={{ .URL }} data-title={{ .Title }}></i>
+                      </p>
                     <h2>#{{ .Params.episode }} {{ .Title }}</h2>
                 </a>
             </div>
