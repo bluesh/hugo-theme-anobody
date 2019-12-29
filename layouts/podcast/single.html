@@ -1,74 +1,69 @@
 {{ define "main" }}
 
-{{- partial "subscribe.html" . }}
 <div class="container">
-  <div class="main-area">
-      {{- partial "breadcrumbs.html" . }}
-      <article class="list-item">
-          <h2>#{{ .Params.episode }} {{ title .Title }}</h2>
-          <div class="podcast-header">
-            <div class="podcast-header-left">
-              <img src="{{ .Params.episode_image | absURL }}" class="img-fluid episode_image" alt="{{ .Description | markdownify }} | 小人物播客 A Nobody Podcast"/>
+  <div class="border-content">
+    <div class="main-area">
+        <article class="list-item">
+            <p class="list-tag"><i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }}   |   <i class="fa fa-hourglass-half"></i>{{ .Params.podcast_duration }} </p>
+            <h2>#{{ .Params.episode }} {{ title .Title }}</h2>
+            <div class="podcast-header">
+                <audio class="podcast-audio" src="{{ .Params.media_prefix }}{{ .Params.podcast_file }}" controls preload></audio>
+                <p class="podcast-header-des">{{ .Description | markdownify }}</p>
             </div>
-            <div class="podcast-header-right">
-              <p><i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} | <i class="fa fa-hourglass-half"></i>{{ .Params.podcast_duration }} </p>
-              <audio class="podcast-audio" src="{{ .Params.media_prefix }}{{ .Params.podcast_file }}" controls preload></audio>
-              <p class="podcast-header-des">{{ .Description | markdownify }}</p>
+            
+            <!-- donate start -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-1425368802546894"
+                data-ad-slot="4709849129"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- donate end -->
+            
+            <div class="podcast-content">
+                {{ .Content }}
             </div>
-          </div>
-          
-          <!-- donate start -->
-          <ins class="adsbygoogle"
-              style="display:block"
-              data-ad-client="ca-pub-1425368802546894"
-              data-ad-slot="4709849129"
-              data-ad-format="auto"
-              data-full-width-responsive="true"></ins>
-          <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-          <!-- donate end -->
-          
-          <div class="podcast-content">
-              {{ .Content }}
-          </div>
-    
-          <div class="podcast-footer">
-              {{ with .Site.Params.disqusShortname }}
-              <!-- disqus begins -->
-              <div class="disqus-plugin">
-                  {{ partial "disqus.html" }}
-              </div>
-              <!-- disqus ends -->
-              {{ end }}
-    
-               <!-- pager begin -->
-              <nav class="pager-plugin">
-                <div class="pagination">
-                  {{ if .PrevInSection }}
-                    <div class="page-item">
-                      <a href="{{.PrevInSection.Permalink}}" class="page-link">
-                        <span aria-hidden="true">&larr;</span> 上一期：
-                        #{{ .PrevInSection.Params.episode }} {{ title .PrevInSection.Title }}</a>
-                      </div>
-                  {{ end }}
-                  {{ if .NextInSection }}
-                    <div class="page-item">
-                      <a href="{{.NextInSection.Permalink}}" class="page-link">
-                        <span aria-hidden="true">&rarr;</span> 下一期：
-                        #{{ .NextInSection.Params.episode }} {{ title .NextInSection.Title }}
-                      </a>
-                    </div>
-                  {{ end }}
+      
+            <div class="podcast-footer">
+                {{ with .Site.Params.disqusShortname }}
+                <!-- disqus begins -->
+                <div class="disqus-plugin">
+                    {{ partial "disqus.html" }}
                 </div>
-              </nav>
-              <!-- pager end -->
-          </div>
-           
-      </article>
+                <!-- disqus ends -->
+                {{ end }}
+      
+                <!-- pager begin -->
+                <nav class="pager-plugin">
+                  <div class="pagination">
+                    {{ if .PrevInSection }}
+                      <div class="page-item">
+                        <a href="{{.PrevInSection.Permalink}}" class="page-link">
+                          <span aria-hidden="true">&larr;</span> 上一期：
+                          #{{ .PrevInSection.Params.episode }} {{ title .PrevInSection.Title }}</a>
+                        </div>
+                    {{ end }}
+                    {{ if .NextInSection }}
+                      <div class="page-item">
+                        <a href="{{.NextInSection.Permalink}}" class="page-link">
+                          <span aria-hidden="true">&rarr;</span> 下一期：
+                          #{{ .NextInSection.Params.episode }} {{ title .NextInSection.Title }}
+                        </a>
+                      </div>
+                    {{ end }}
+                  </div>
+                </nav>
+                <!-- pager end -->
+            </div>
+            
+        </article>
+    </div>
+    
+    {{- partial "sidebar.html" . }}
   </div>
-  
-  {{- partial "sidebar.html" . }}
 </div>
 
 {{ end }}

@@ -1,8 +1,8 @@
 <!-- sidebar start -->
 <aside class="sidebar">
-    <h4>Contact</h4>
+    <hr class="mobile-size">
     <p>网站内容都是免费的，但运营、存储每月都需要支出时间和money。分享、转发、订阅是对我们最大的肯定和支持。</p>
-    <p>太喜欢了想<a href="/about#请阿乐喝咖啡">请阿乐喝咖啡☕️</a></p>
+    <p>太喜欢了想<a href="/about#请阿乐喝杯酒" style="text-decoration: underline;">请阿乐喝杯酒🍷</a></p>
     <ul>
         <li><a href="mailto:anobody.fm@gmail.com" title="emailtoanobody"><i class="fa fa-envelope-open"></i> Email</a></li>
         <li><a href="https://t.me/joinchat/HZYEyxY8fwgSKcvQIwvzXQ" target="_blank" el="nofollow" title="anobodyfm-tg"><i class="fa fa-telegram"></i> Telegram</a></li>
@@ -21,7 +21,7 @@
     <h4>Top Article</h4>
     <ul>
         {{ range $elem_key, $elem_val := $.Site.Params.top_articles }}
-        <li><a href="{{ $elem_key }}" title="{{ $elem_val }}">{{ $elem_val }}</a></li>
+        <li><a href="{{ $elem_key }}" title="{{ $elem_val }}">- {{ $elem_val }}</a></li>
         {{ end }}
     </ul>
     <h4>Top Podcast</h4>

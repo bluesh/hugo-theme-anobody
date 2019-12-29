@@ -1,24 +1,22 @@
 
 {{ define "main" }}
-{{- partial "subscribe.html" . }}
 <div class="container">
-    <article class="main-area">
-    {{- partial "breadcrumbs.html" . }}
-    <!-- this <div> includes the title summary -->
-    {{ range .Pages }}
-    <div class="list-item">
-      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      <p>
-          <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} | 
-          <i class="fa fa-tags"></i>
-          {{ range .Params.tags }}
-              <a href="/tags/{{ . }}">{{ . }}</a>
-          {{ end }}
-      </p>
-    </div>
-  {{ end }}
-    
-</article>
-{{- partial "sidebar.html" . }}
+  <div class="border-content">
+      <article class="main-area">
+        {{ range .Pages }}
+        <div class="list-item">
+          <p class="list-tag">
+            <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} | 
+            <i class="fa fa-tags"></i>
+            {{ range .Params.tags }}
+                <a href="/tags/{{ . }}">{{ . }}</a>
+            {{ end }}
+          </p>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        </div>
+        {{ end }}
+      </article>
+      {{- partial "sidebar.html" . }}
+  </div>
 </div>
 {{ end }}

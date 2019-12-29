@@ -1,19 +1,20 @@
 
 {{ define "main" }}
-{{- partial "subscribe.html" . }}
 <div class="container">
-    <article class="main-area">
-    {{- partial "breadcrumbs.html" . }}
-    <!-- this <div> includes the title summary -->
-    {{ range .Pages }}
-    <div class="list-item">
-        <h2><a href="{{ .RelPermalink }}">#{{ .Params.episode }} {{ .Title }}</a></h2>
-        <p>{{ dateFormat "Jan 2, 2006" .Date }} | {{ .Params.podcast_duration }} </p>
-        {{ .Description }}
+    <div class="border-content">
+        <article class="main-area">
+            {{ range .Pages }}
+            <div class="list-item">
+                <a href="{{ .RelPermalink }}">
+                    <i class="fa fa-play-circle icon-play"></i>
+                    <p class="list-tag"><i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }}   |   <i class="fa fa-hourglass-half"></i>{{ .Params.podcast_duration }} </p>
+                    <h2>#{{ .Params.episode }} {{ .Title }}</h2>
+                </a>
+            </div>
+            {{ end }}
+            
+        </article>
+        {{- partial "sidebar.html" . }}
     </div>
-    {{ end }}
-    
-</article>
-{{- partial "sidebar.html" . }}
 </div>
 {{ end }}

@@ -1,13 +1,13 @@
 {{ define "main" }}
-{{- partial "subscribe.html" . }}
 <div class="container">
-    <div class="main-area">
-    {{- partial "breadcrumbs.html" . }}
-    <article class="list-item">
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-    </article>
+    <div class="border-content">
+        <div class="main-area">
+        <article class="list-item article">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </article>
+        </div>
+        {{- partial "sidebar.html" . }}
     </div>
-    {{- partial "sidebar.html" . }}
 </div>
 {{ end }}
