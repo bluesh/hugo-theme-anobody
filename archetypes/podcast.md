@@ -13,12 +13,12 @@ draft: false
 ---
 
 #### 本期人物： 
-<a el="nofollow" target="_blank" href="https://twitter.com/Bluesh0" title="阿乐twitter">阿乐</a>、
-<a el="nofollow" target="_blank" href="" title=""></a>
+<a rel="nofollow" target="_blank" href="https://twitter.com/Bluesh0" title="阿乐twitter">阿乐</a>、
+<a rel="nofollow" target="_blank" href="" title=""></a>
 
 #### 时间轴：
 
 - 01:30 
 
 #### 相关链接：
-<a el="nofollow" target="_blank" href="" title=""></a>
+<a rel="nofollow" target="_blank" href="" title=""></a>
