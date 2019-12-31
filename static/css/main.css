@@ -201,6 +201,9 @@ blockquote {
 .txc {
     text-align: center;
 }
+.podcast-content a {
+    text-decoration: underline;
+}
 @media only screen and (max-width :800px){
     .mobile-size {
         display: block;
