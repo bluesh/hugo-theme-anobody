@@ -18,13 +18,13 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    <h4>Top Article</h4>
+    <h4>推荐文章</h4>
     <ul>
         {{ range $elem_key, $elem_val := $.Site.Params.top_articles }}
         <li><a href="{{ $elem_key }}" title="{{ $elem_val }}">- {{ $elem_val }}</a></li>
         {{ end }}
     </ul>
-    <h4>Top Podcast</h4>
+    <h4>推荐播客</h4>
     <ul>
         {{ range $elem_key, $elem_val := $.Site.Params.top_podcasts }}
         <li><a href="{{ $elem_key }}" title="{{ $elem_val }}">{{ $elem_val }}</a></li>
