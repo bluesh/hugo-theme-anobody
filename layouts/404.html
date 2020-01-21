@@ -1,13 +1,27 @@
 {{ define "main"}}
 {{- partial "subscribe.html" . }}
 <div class="container">
+  <div class="border-content">
     <div class="main-area">
         <article class="list-item">
           <p>来到一个不存在的页面，想静静...</p>
           <h2 id="title"><a href="{{ "/" | relURL }}">回到首页</a></h2>
+
+          <!-- donate start -->
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-1425368802546894"
+              data-ad-slot="4709849129"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+          <!-- donate end -->
         </article>
     </div>
-    
     {{- partial "sidebar.html" . }}
+  </div>
+
 </div>
 {{ end }}
