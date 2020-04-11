@@ -3,7 +3,7 @@
 <div class="container">
     <div class="border-content">
         <article class="main-area">
-            {{ range .Pages }}
+            {{ range (.Paginator 15).Pages }}
             <div class="list-item">
                 <a href="{{ .RelPermalink }}">
                     <i class="fa fa-play-circle icon-play"></i>
@@ -16,7 +16,7 @@
                 </a>
             </div>
             {{ end }}
-            
+        {{- partial "paginator.html" . }}
         </article>
         {{- partial "sidebar.html" . }}
     </div>

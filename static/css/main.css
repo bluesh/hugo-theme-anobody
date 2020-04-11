@@ -146,6 +146,7 @@ h4 {
 .coffee-img .img-fluid {
     width: 48%;
     height: auto;
+    align-self: center;
 }
 .sidebar li {
     list-style: none;
