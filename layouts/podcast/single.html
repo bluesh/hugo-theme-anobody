@@ -30,7 +30,9 @@
             <div class="podcast-content">
                 {{ .Content }}
             </div>
-      
+            
+            {{- partial "podcastsubscribeinfo.html" . }}   
+
             <div class="podcast-footer">
                 {{ with .Site.Params.disqusShortname }}
                 <!-- disqus begins -->
