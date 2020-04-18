@@ -62,21 +62,66 @@ h4 {
     display: inline-block;
     margin: 0 8px;
 }
+nav.subscribe {
+    border-bottom: 3px solid #112c22;
+}
 .subscribe-group {
     text-transform: none;
-    border-bottom: 3px solid #112c22;
-    text-align: center;
+    list-style: none;
+    overflow: hidden;
+    max-width: 1060px;
+    margin: 0 auto;
 }
-.subscribe-group .btn {
+.subscribe-group li { float: right; }
+#content .subscribe-group li { float: left; }
+.subscribe-icon {
     display: inline-block;
-    font-size: 0.8em;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
     margin: 6px;
-    background-color: #dc9810;
-    opacity: 0.6;
-    /* border-top: 1px solid #3D3634; */
-    border-radius: 2px;
-    padding: 0px 6px;
+    opacity: 0.8;
+    border-radius: 5px;
+    background: url(https://static.anobody.im/images/subscribeicon.jpg) -3px -2px;
+    background-size: 360px;
 }
+.subscribe-icon.apple {
+    background-position: -3px -2px;
+}
+.subscribe-icon.spotify {
+    background-position: -75px -2px;
+}
+.subscribe-icon.rss {
+    background-position: -75px -39px;
+}
+.subscribe-icon.breaker {
+    background-position: -255px -2px;
+}
+.subscribe-icon.himalaya {
+    background-position: -219px -2px;
+}
+.subscribe-icon.overcast {
+    background-position: -39px -2px;
+}
+.subscribe-icon.google {
+    background-position: 32px -2px;
+    border-radius: 50%;
+}
+.subscribe-icon.playerfm {
+    background-position: -3px -38px;
+    border-radius: 50%;
+}
+.subscribe-icon.moonfm {
+    background-position: -39px -39px;
+    border-radius: 50%;
+}
+.subscribe-icon.xiaoyuzhou {
+    background-position: -183px -2px;
+}
+.subscribe-icon.pca {
+    background-position: -111px -2px;
+}
+
 .anobody-footer {
     overflow: hidden;
     margin: 28px;
