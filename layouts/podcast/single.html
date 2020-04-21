@@ -11,7 +11,7 @@
             </p>
             <h2>#{{ .Params.episode }} {{ title .Title }}</h2>
             <div class="podcast-header">
-                <audio class="podcast-audio" src="{{ .Params.media_prefix }}{{ .Params.podcast_file }}" controls preload></audio>
+                <audio class="podcast-audio" src="{{ .Params.media_prefix }}{{ .Params.podcast_file }}" controls preload="metadata"></audio>
                 <p class="podcast-header-des">{{ .Description | markdownify }}</p>
             </div>
             
