@@ -87,7 +87,7 @@
           {{ with .Params.episode }}
           <itunes:episode>{{ . }}</itunes:episode>
           {{ end }}
-        <itunes:summary>{{ .Params.description | plainify }}</itunes:summary>
+        <itunes:summary>{{ .Params.description | plainify }} ---- 邮件{{ .Site.Params.feed_itunes_owner_email }}</itunes:summary>
         <description>{{ .Params.description  | plainify  }}</description>
         <googleplay:description>{{ .Params.description  | plainify }}</googleplay:description>
         {{ "<content:encoded><![CDATA[" | safeHTML }}{{ .Content | safeHTML }}{{"]]></content:encoded>" | safeHTML}}
