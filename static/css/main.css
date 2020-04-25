@@ -1,6 +1,6 @@
 /* Put your custom styles here and run `npm start` from the "src" directory on */
 body {
-    font: 300 16px/1.8 Merriweather, proxima-nova, Optima-Regular, PingFangTC-light, serif;
+    font: 300 16px/1.8 Optima-Regular, PingFangTC-light, serif;
     color: #112c22;
 }
 img {
@@ -12,13 +12,10 @@ a {
 }
 b, strong {
     font-weight: bold;
+    color: #dc9810;
 }
 i.fa { margin-right: 6px }
 p { word-break: break-all; margin: 0; }
-h1, h2, h3, h4, h5, h6 {
-    color: #112c22;
-    margin: 0;
-}
 audio {
     width: 100%;
 }
@@ -32,16 +29,18 @@ hr {
     border-top: 1px solid #112c22;
     border-bottom: 1px solid #112c22;
 }
-h1,h2,h3 {
+h1,h2 {
     font-size: 1.2em;
     font-weight: normal;
-    margin-bottom: 20px;
+    margin: 0 0 16px 0;
+}
+h3 {
+    font-size: 1.2em;
+    margin: 2em 0 0.2em 0;
 }
 h4,h5,h6 {
     font-size: 1em;
-}
-h4 {
-    margin-top: 1.5em;
+    margin: 2em 0 0.2em 0;
 }
 .anobody-header {
     text-align: center;
@@ -153,13 +152,11 @@ nav.subscribe {
     border-right: 1px solid #112c22;
 }
 .sidebar {
-    font-size: 0.85em;
     width: 288px;
     padding-left: 28px;
     float: left;
     margin-left: -1px;
     border-left: 1px solid #112c22;
-
 }
 .list-item {
     padding-right: 28px;
@@ -196,7 +193,6 @@ nav.subscribe {
 .sidebar li {
     list-style: none;
     margin: 0 0 10px 0;
-    color: #dc9810;
 }
 ul, ol {
     margin: 0;
@@ -209,29 +205,26 @@ li {
 li p {
     display: inline;
 }
-
-.article h3,
-.article h4,
-.article h5,
-.article h6 {
-    margin-top: 1.5em;
-    margin-bottom: 0;
-    font-weight: bold;
-}
 .article p {
     margin-bottom: 1.2em;
 }
-.article a {
-    color: #dc9810;
+.podcast-content a,
+.sidebar a {
+    text-decoration: none;
+    padding: 0 3px;
+    border-bottom: 1px solid #dc9810;
 }
-
-.article a:before,
-.article a:after {
+.podcast-content a:hover,
+.sidebar a:hover  {
+    border-width: 2px;
+}
+.list-tag a:before,
+.list-tag a:after {
     content: '[';
     margin: 0 2px;
     color: gray;
 }
-.article a:after {
+.list-tag a:after {
     content: ']';
 }
 blockquote {
@@ -247,8 +240,12 @@ blockquote {
 .txc {
     text-align: center;
 }
-.podcast-content a {
-    text-decoration: underline;
+.social-list a {
+    border: none;
+}
+.social-list a:hover {
+    color: #dc9810;
+    transition: 0.3s;
 }
 @media only screen and (max-width :800px){
     .mobile-size {

@@ -15,6 +15,12 @@
                 <p class="podcast-header-des">{{ .Description | markdownify }}</p>
             </div>
             
+            <div class="podcast-content">
+                {{ .Content }}
+            </div>
+            
+            {{- partial "podcastsubscribeinfo.html" . }}   
+
             <!-- donate start -->
             <ins class="adsbygoogle"
                 style="display:block"
@@ -26,13 +32,6 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
             <!-- donate end -->
-            
-            <div class="podcast-content">
-                {{ .Content }}
-            </div>
-            
-            {{- partial "podcastsubscribeinfo.html" . }}   
-
             <div class="podcast-footer">
                 {{ with .Site.Params.disqusShortname }}
                 <!-- disqus begins -->
