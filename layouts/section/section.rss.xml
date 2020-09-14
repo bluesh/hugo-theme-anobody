@@ -90,7 +90,7 @@
         <itunes:summary>{{ .Params.description | plainify }}</itunes:summary>
         <description>{{ .Params.description  | plainify  }}</description>
         <googleplay:description>{{ .Params.description  | plainify }}</googleplay:description>
-        {{ "<content:encoded><![CDATA[" | safeHTML }}{{ .Content | safeHTML }}{{"]]></content:encoded>" | safeHTML}}
+        {{ "<content:encoded><![CDATA[" | safeHTML }}{{ .Params.description  | plainify }} {{ .Content | safeHTML }}{{"]]></content:encoded>" | safeHTML}}
           {{- with .Params.episode_image -}}
           <itunes:image href="{{ . | absURL }}"></itunes:image>
           <googleplay:image href="{{ . | absURL }}"></googleplay:image>
