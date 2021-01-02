@@ -5,9 +5,17 @@
     <div class="main-area">
         <article class="list-item">
             <p class="list-tag">
-              <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} <em>|</em>
-              <i class="fa fa-hourglass-half"></i>{{ .Params.podcast_duration }} <em>|</em>
-              <i class="fa fa-book"></i><i class="leancloud_visitors" id={{ .URL }} data-title={{ .Title }}></i>
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-calender"></use>
+              </svg>
+              {{ dateFormat "Jan 2, 2006" .Date }} <em>|</em>
+              <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-time"></use>
+              </svg>
+              {{ .Params.podcast_duration }} <em>|</em>
+              <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-view"></use>
+              </svg><i class="leancloud_visitors" id={{ .URL }} data-title={{ .Title }}></i>
             </p>
             <h2>#{{ .Params.episode }} {{ title .Title }}</h2>
             <div class="podcast-header">
@@ -22,12 +30,13 @@
             {{- partial "podcastsubscribeinfo.html" . }}   
 
             <!-- donate start -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
                 style="display:block"
+                data-ad-format="fluid"
+                data-ad-layout-key="-6t+ed+2i-1n-4w"
                 data-ad-client="ca-pub-1425368802546894"
-                data-ad-slot="4709849129"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+                data-ad-slot="4709849129"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>

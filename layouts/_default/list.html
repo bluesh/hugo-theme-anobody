@@ -6,12 +6,20 @@
         {{ range (.Paginator 15).Pages }}
         <div class="list-item">
           <p class="list-tag">
-            <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} <em>|</em>
-            <i class="fa fa-tags"></i>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-calender"></use>
+            </svg>
+            {{ dateFormat "Jan 2, 2006" .Date }} <em>|</em>
+
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-tag"></use>
+            </svg>
             {{ range .Params.tags }}
                 <a href="/tags/{{ . }}">{{ . }}</a>
             {{ end }} <em>|</em>
-            <i class="fa fa-book"></i><i class="leancloud_visitors" id={{ .URL }} data-title={{ .Title }}></i>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-view"></use>
+            </svg><i class="leancloud_visitors" id={{ .URL }} data-title={{ .Title }}></i>
           </p>
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         </div>

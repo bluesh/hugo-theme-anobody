@@ -1,33 +1,46 @@
 <!-- sidebar start -->
 <aside class="sidebar">
-    <hr class="mobile-size">
-    <p>网站内容都是免费的，但运营、存储每月都需要支出时间和money。分享、转发、订阅是对我们最大的肯定和支持。</p>
-    <p>太喜欢了想<a href="/about">请阿乐喝杯酒🍷</a></p>
-    <ul class="social-list">
-        <li><a href="mailto:anobody.fm@gmail.com" title="emailtoanobody"><i class="fa fa-envelope-open"></i> Email</a></li>
-        <li><a href="https://t.me/joinchat/HZYEyxY8fwgSKcvQIwvzXQ" target="_blank" rel="nofollow" title="anobodyfm-tg"><i class="fa fa-telegram"></i> Telegram</a></li>
-        <li><a href="https://twitter.com/anobodyfm" target="_blank" rel="nofollow" title="anobodyfm-twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
-    </ul>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-format="fluid"
-        data-ad-layout-key="-6t+ed+2i-1n-4w"
-        data-ad-client="ca-pub-1425368802546894"
-        data-ad-slot="7064248406"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    <h4>推荐文章</h4>
-    <ul>
-        {{ range $elem_key, $elem_val := $.Site.Params.top_articles }}
-        <li><a href="{{ $elem_key }}" title="{{ $elem_val }}">- {{ $elem_val }}</a></li>
-        {{ end }}
-    </ul>
-    <h4>推荐播客</h4>
-    <ul>
-        {{ range $elem_key, $elem_val := $.Site.Params.top_podcasts }}
-        <li><a href="{{ $elem_key }}" title="{{ $elem_val }}">{{ $elem_val }}</a></li>
-        {{ end }}
-    </ul>
+    <div class="author-card">
+        <img class="author-logo" src="{{ .Site.Params.author_logo }}" alt="{{ .Site.Params.author_name }} | A NOBODY PODCAST">
+        <p>{{ .Site.Params.author_bio }}</p>
+        <ul class="author-socials">
+            {{ range $elem_key, $elem_val := $.Site.Params.author_socials }}
+            <!-- {{ $elem_key }}-{{ $elem_val }} -->
+            <li><a href="{{ $elem_val }}" title="-{{ $elem_key }}">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-{{ $elem_key }}"></use>
+                  </svg>
+            </a></li>
+            {{ end }}
+        </ul>
+    </div>
+    <div class="recommend-card">
+        <p>广告位 或者<a href="/about">请阿乐喝酒🍷</a></p>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-6t+ed+2i-1n-4w"
+            data-ad-client="ca-pub-1425368802546894"
+            data-ad-slot="7064248406"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <div class="recommend-card">
+        <h4>推荐文章</h4>
+        <ul>
+            {{ range $elem_key, $elem_val := $.Site.Params.top_articles }}
+            <li><a href="{{ $elem_key }}" title="{{ $elem_val }}">- {{ $elem_val }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    <div class="recommend-card">
+        <h4>推荐播客</h4>
+        <ul>
+            {{ range $elem_key, $elem_val := $.Site.Params.top_podcasts }}
+            <li><a href="{{ $elem_key }}" title="{{ $elem_val }}">{{ $elem_val }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
 </aside>

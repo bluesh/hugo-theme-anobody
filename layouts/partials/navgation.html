@@ -1,13 +1,21 @@
 <nav class="navgation">
-    <ul>
+    <ul class="container">
         <li>
-            <a href="/podcast">Podcast</a>
+            <a class="header-logo" href="{{ .Site.BaseURL }}">
+                <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }} | A NOBODY PODCAST">
+            </a>
         </li>
         <li>
-            <a href="/about">About</a>
+            <a href="/">首页</a>
         </li>
         <li>
-            <a href="/article">Article</a>
+            <a href="/article">文章</a>
+        </li>
+        <li>
+            <a href="/podcast">播客</a>
+        </li>
+        <li>
+            <a href="/about">关于</a>
         </li>
     </ul>
 </nav>

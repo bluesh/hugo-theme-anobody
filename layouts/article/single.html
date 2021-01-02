@@ -5,12 +5,20 @@
       <div class="main-area">
       <article class="list-item article">
           <p class="list-tag">
-            <i class="fa fa-calendar"></i>{{ dateFormat "Jan 2, 2006" .Date }} <em>|</em>
-            <i class="fa fa-tags"></i>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-calender"></use>
+            </svg>
+            {{ dateFormat "Jan 2, 2006" .Date }} <em>|</em>
+
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-tag"></use>
+            </svg>
             {{ range .Params.tags }}
                 <a href="/tags/{{ . }}">{{ . }}</a>
             {{ end }} <em>|</em>
-            <i class="fa fa-book"></i><i class="leancloud_visitors" id={{ .URL }} data-title={{ .Title }}></i>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-view"></use>
+            </svg><i class="leancloud_visitors" id={{ .URL }} data-title={{ .Title }}></i>
           </p>
           <h2>{{ title .Title }}</h2>
     
@@ -19,12 +27,13 @@
           </div>
 
           <!-- donate start -->
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <ins class="adsbygoogle"
               style="display:block"
+              data-ad-format="fluid"
+              data-ad-layout-key="-6t+ed+2i-1n-4w"
               data-ad-client="ca-pub-1425368802546894"
-              data-ad-slot="4709849129"
-              data-ad-format="auto"
-              data-full-width-responsive="true"></ins>
+              data-ad-slot="4709849129"></ins>
           <script>
               (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
