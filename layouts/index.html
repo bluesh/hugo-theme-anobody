@@ -4,36 +4,10 @@
         <div class="main-area">
           <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
           {{ .Content }}
-          <img class="img-title" alt="{{ .Title }}播客 podcast" src="https://static.anobody.im/images/podcast.jpg" />
-          <!-- Note that .Pages is the same as .Site.RegularPages on the homepage template. -->
-          {{ with .Site.GetPage "podcast" }}
-            <article>
-              <!-- this <div> includes the title summary -->
-              {{ range first 5 .Pages }}
-              <div class="list-item">
-                <a href="{{ .RelPermalink }}">
-                    <p class="list-tag">
-                      <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-calender"></use>
-                      </svg>
-                      {{ dateFormat "Jan 2, 2006" .Date }} <em>|</em>
-                      <svg class="icon" aria-hidden="true">
-                          <use xlink:href="#icon-time"></use>
-                      </svg>
-                      {{ .Params.podcast_duration }} <em>|</em>
-                      <svg class="icon" aria-hidden="true">
-                          <use xlink:href="#icon-view"></use>
-                      </svg><i class="leancloud_visitors" id={{ .URL }} data-title={{ .Title }}></i>
-                    </p>
-                    <h2>#{{ .Params.episode }} {{ .Title }}</h2>
-                </a>
-            </div>
-              {{ end }}
-            </article>
-          {{ end }}
-          <p class="txc"><a href="/podcast/">- 更多播客 -</a></p>
+          <iframe src="https://embed.podcasts.apple.com/us/podcast/%E5%B0%8F%E4%BA%BA%E7%89%A9-a-nobody/id1479851581?itsct=podcast_box&amp;itscg=30200&amp;theme=light" height="380px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
+          <p class="txc"><a href="/podcast/"><small>- 更多播客 -</small></a></p>
           <hr />
-          <img class="img-title" alt="{{ .Title }}播客 article" src="https://static.anobody.im/images/article.jpg" />
+          <!-- <img class="img-title" alt="{{ .Title }}播客 article" src="https://static.anobody.im/images/article.jpg" /> -->
           {{ with .Site.GetPage "article" }}
             <article>
               <!-- this <div> includes the title summary -->
@@ -60,7 +34,7 @@
               {{ end }}
             </article>
           {{ end }}
-          <p class="txc"><a href="/article/">- 更多文章 -</a></p>
+          <p class="txc"><a href="/article/"><small>- 更多文章 -</small></a></p>
         </div>
 
         {{- partial "sidebar.html" . }}

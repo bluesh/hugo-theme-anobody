@@ -5,6 +5,7 @@
         <article class="list-item article">
             <h1>{{ .Title }}</h1>
             {{ .Content }}
+            {{- partial "podcastsubscribeinfo.html" . }}
         </article>
         </div>
         {{- partial "sidebar.html" . }}

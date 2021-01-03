@@ -1,12 +1,12 @@
 <div>
-    <h4>🎧如何订阅和收听</h4>
+    <h4>🎧 如何订阅和收听</h4>
     <ul class="subscribe-group">
         {{ range $elem_key, $elem_val := $.Site.Params.subscribe }}
         <li><a href="{{ $elem_val }}" class="subscribe-icon {{ $elem_key }}" title="{{ $elem_key }}{{ $.Site.Params.title }}" alt="{{ $elem_key }}{{ $.Site.Params.title }}">{{ $elem_key }}</a></li>
         {{ end }}
     </ul>
     <p>如果你不常听播客，不如从此刻开始尝试这个介质获取信息。也许能找到更多你感兴趣的话题。如果你平常有在听有声读物或者播客，那太好了！</p>
-    <p>推荐在「泛用型播客客户端」直接搜索「小人物」或输入 RSS 地址找到我们：<br>
+    <p>推荐在「泛用型播客客户端」直接搜索「小人物 A Nobody Podcast」或输入 RSS 地址找到我们：<br>
         <a href="https://anobody.im/podcast/rss.xml">https://anobody.im/podcast/rss.xml</a>。或者直接点击上面对应的播客图标找到我们。</p>
     <p>如果你喜欢我们的节目，欢迎在 <a href="https://podcasts.apple.com/cn/podcast/小人物/id1479851581?l=en">[ Apple Podcast ]</a> 给我们打个五星 ★★★★★ 。也欢迎留言评论，告诉我你的感想和建议。你的每一次鼓励都让我更有动力，意义非凡。</p>
 </div>

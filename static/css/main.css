@@ -178,6 +178,7 @@ h4,h5,h6 {
     /* float: left; */
     /* border-right: 1px solid #112c22; */
     padding-right: 28px;
+    max-width: 860px;
     flex: 3;
 }
 .sidebar {
@@ -244,10 +245,11 @@ h4,h5,h6 {
     display: inline-block;
     margin: 0 8px;
 }
-.author-socials li a {
+.author-socials li a,.recommend-card a {
     transition: color 0.3s;
 }
-.author-socials li a:hover {
+.author-socials li a:hover,
+.recommend-card a:hover {
     color: #dc9810;
 }
 .recommend-card h4 {
@@ -270,14 +272,13 @@ li p {
 .article p {
     margin-bottom: 1.2em;
 }
-.podcast-content a,
-.sidebar a {
+.podcast-content a {
     text-decoration: none;
     padding: 0 3px;
-    /* border-bottom: 1px solid #dc9810; */
+    border-bottom: 1px solid #dc9810;
+    transform: border 0.3s;
 }
-.podcast-content a:hover,
-.sidebar a:hover  {
+.podcast-content a:hover {
     border-width: 2px;
 }
 .list-tag a:before,
@@ -309,6 +310,7 @@ blockquote {
     color: #dc9810;
     transition: 0.3s;
 }
+
 @media only screen and (max-width :800px){
     .mobile-size {
         display: block;
