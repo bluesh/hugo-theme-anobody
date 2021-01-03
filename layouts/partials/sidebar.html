@@ -5,7 +5,6 @@
         <p>{{ .Site.Params.author_bio }}</p>
         <ul class="author-socials">
             {{ range $elem_key, $elem_val := $.Site.Params.author_socials }}
-            <!-- {{ $elem_key }}-{{ $elem_val }} -->
             <li><a href="{{ $elem_val }}" title="-{{ $elem_key }}">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-{{ $elem_key }}"></use>

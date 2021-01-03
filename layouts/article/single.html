@@ -39,13 +39,11 @@
           </script>
           <!-- donate end -->
           <div class="podcast-footer">
-              {{ with .Site.Params.disqusShortname }}
               <!-- disqus begins -->
               <div class="disqus-plugin">
-                  {{ partial "disqus.html" }}
+                  {{- partial "disqus.html" . }}
               </div>
               <!-- disqus ends -->
-              {{ end }}
     
                <!-- pager begin -->
               <nav class="pager-plugin">
